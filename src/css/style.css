@@ -1,0 +1,390 @@
+body{
+    background-image: url("../images//page-bg.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+
+}
+html,body{
+    overflow-x: hidden;
+}
+/*start nav bar*/
+nav{
+    background-color: #a53e4d;
+position: fixed;
+height: 100%;
+display: flex;
+justify-content: center;
+left: 9%;
+top: 0;
+z-index: 999;
+
+
+}
+nav >div{
+    margin-top: 5em;
+    color: white;
+    text-align: center;
+    width: 100%;
+
+}
+nav > div h2{
+    margin-top: 1em;
+}
+nav >div ul {
+    margin: 0;
+    list-style: none;
+    line-height: 4em;
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 100%;
+    padding: 0;
+}
+nav >div ul li{
+    
+        width: 100%;
+border-bottom: 2px solid white;
+        cursor: pointer;
+
+         
+}
+
+nav >div ul li:hover,li.active-link{
+    
+background-color: white;
+color: #a53e4d;
+transition: all ease .5s;
+     
+}
+.nav-bar-icon {
+    margin: 0.3em;
+    font-size: 1em;
+    cursor: pointer;
+    background: #7c323d;
+    padding: 0.4em;
+    margin-top: 1em;
+}
+.nav-bar-icon:hover {
+  
+    background: white;
+    color: #7c323d;
+}
+nav >  button {
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: white;
+    color: #7c323d;
+    font-weight: bold;
+    font-size: 1.8em;
+    display: none;
+    z-index: 999;
+}
+
+nav >  button:hover {
+    background: rgb(228, 224, 224);
+
+   
+}
+
+nav img{
+    border-radius: 50%;
+}
+
+
+ #bars{
+    opacity: 0;
+ } 
+
+
+
+/*end nav bar*/
+
+
+
+/*start about*/
+
+.about-section >.col-sm-12 {
+    color: white;
+    text-align: center;
+}
+.about-section .row .col-lg-6 img{
+    border-radius: .5em;
+}
+
+
+.line{
+    width: 3em;
+    height: 3px;
+    background: #7c323d;
+    margin: 0px auto;
+    margin-bottom: 4px;
+    margin-top: 1em;
+}
+.about-section .col-lg-6.right-side {
+    color: white;
+    display: flex;
+    align-items: center;
+    line-height: 2em;
+}
+.about-section .col-lg-6.right-side >div button{
+    color: #7c323d;
+    background: white;
+    font-weight: bold;
+    border: none;
+    padding: .5em 1em;
+    font-size: 1.2em;
+}
+.about-section .col-lg-6.right-side >div button:hover{
+    background-color: #7c323d;
+    color: white;
+    transition: all ease .5s;
+}
+/*end about*/
+
+
+/* start WhatImGoodAt*/
+.WhatImGoodAt .parent,.Works .parent, .contact .parent{
+    text-align: center;
+    color: white;
+}
+.WhatImGoodAt .block {
+    position: relative;
+    height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid transparent;
+    color: white;
+    cursor: pointer;
+}
+.block::before{
+    content: "";
+    background: white;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .1;
+    z-index: -1;
+}
+.block:hover::before{
+    opacity: 1;
+    transition: all ease .5s;
+  
+}
+.block:hover{
+    color: black;
+    transition: all ease .5s;
+
+
+    
+}
+/* end WhatImGoodAt*/
+
+/* start works*/
+
+ .Works ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.Works ul li.acitve{
+    color: #7c323d;
+    border-bottom: 1px solid #7c323d;
+}
+.Works img.img-fluid{
+    border-radius: 5px;
+    margin-top: 1em;
+}
+.white-screen {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform-origin: center;
+}
+.image-block:hover .white-screen{
+opacity: 1;
+transition: .5s ease;
+}
+.image-block:hover .white-screen::before{
+    transform: scale(.9,.8);
+    transition: .5s ease;
+    }
+.white-screen::before {
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: .9;
+    transform: scale(.9,.8);
+    top: -8px;
+    left: -11px;
+    transform: rotateX(270deg);
+}
+svg.svg-inline--fa.fa-magnifying-glass {
+    cursor: pointer;
+    color: white;
+    background: #a53e4d;
+    padding: 0.4em;
+    font-size: 2em;
+    border-radius: 12px;
+    
+}
+.white-screen p{
+    color: grey;
+}
+
+@keyframes scale{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform:  scale(1);
+    }
+}
+.animate{
+    display: block;
+    animation: scale .8s ease 0s forwards;
+}
+
+.slider {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.slider::before{
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    opacity: .95;
+
+}
+.close {
+    position: fixed;
+    top: 2%;
+    left: 96%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 3em;
+}
+/* end works*/
+input.col-lg-5,textarea,input {
+    margin: 1em;
+    background: none;
+    color: white;
+    border: 1px solid;
+    padding: 0.4em;
+}
+textarea{
+    resize: none;
+    min-height: 10em;
+}
+input[type="submit"] {
+    width: 10em;
+    background: white;
+    color: #7c323d;
+    border: white;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    background-color: #7c323d;
+    color: white;
+    transition: all ease .5s;
+
+}
+/*start media quires */
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+.nav-bar-icon{
+    font-size: .9em;
+}
+ 
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    nav >div ul {
+        font-size: 1em;
+    }
+    .nav-bar-icon{
+        font-size: .7em;
+    }
+    
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-section .row .col-lg-6 img.img-fluid.left-image {
+        margin-top: 1em;
+    }
+    nav{
+        font-size: .9rem;
+    }
+    .nav-bar-icon{
+        font-size: .9em;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .col-lg-9.col-md-8.Works {
+        margin-left: 2%;
+    }
+    
+    form {
+        margin-left: 1em;
+    }
+    .col-lg-6.block.aos-init.aos-animate {
+        margin-left: 5%;
+    }
+    nav {
+        left: 0;
+    }
+    .about-section .row .col-lg-6 img.img-fluid.left-image {
+        margin-top: 1em;
+    }
+    #bars{
+        display: block;
+    }
+    nav > button{
+        display: block;
+    }
+  
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    nav {
+        left: 0;
+    }
+    nav{
+        margin-left: 0em;
+    }
+
+
+}
+/*start media quires */
